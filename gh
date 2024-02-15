@@ -1,0 +1,29 @@
+
+        var feet = Double(inputoi.text!)!
+        var inch =  Double(height.text!)!
+        var weight = Double(weight.text!)!
+     var height =  feet * 12 + inch
+     var bmi = 703 * (weight / (height * height) )
+        
+        outputoi.text = String(bmi)
+        
+        if(bmi <= 18.5 ){
+            outputoi.text = "your body mass index  is  \r . This is consider Under weight"
+            image.image = UIImage(named: "underWeight.jpeg")
+        }
+        else if(bmi <= 24.9 && bmi >= 18.6){
+            
+            outputoi.text = "your body mass index  is \(bmi) \r . This is consider Normal weight"
+            image.image = UIImage(named: "normal.jpeg")
+            
+        }
+        else if(bmi <= 29.9 && bmi >= 25){
+            
+            outputoi.text = "your body mass index  is \(bmi) \r . This is consider Over weight"
+            image.image = UIImage(named: "overWeight.jpeg")
+            
+        }
+        else if(bmi >= 30){
+            
+            outputoi.text = "your body mass index  is \(bmi) \r . This is consider obesity weight"
+            image.image = UIImage(named: "obese.jpeg")
